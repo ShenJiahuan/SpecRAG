@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# FAISS build & SWIG generated files
+faiss/build/
+faiss/faiss/python/faiss/
+faiss/faiss/python/swigfaiss_*.swig
+faiss/faiss/python/swigfaiss*.py
+faiss/faiss/python/*_wrap.cpp
+
+# LMCache build artifacts
+lmcache/dist_lmcache/
+lmcache/lmcache/_version.py
+lmcache/csrc_hip/
+
+# SpecRAG runtime data, KV caches, and logs
+specrag/data/
+specrag/logs/
+specrag/kv_cache/
+kv_cache/
+*.log
+.env
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

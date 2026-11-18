@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "specrag"
+version = "0.1.0"
+description = "SpecRAG RAG orchestrator and ANN index builder"
+requires-python = ">=3.10"
+dependencies = [
+    "faiss",
+    "langchain>=1.2.10",
+    "langchain-community>=0.4.1",
+    "langchain-core>=1.2.14",
+    "langchain-openai>=1.1.10",
+    "numpy>=1.26.0",
+    "openai>=2.18.0",
+    "requests>=2.31.0",
+    "tqdm>=4.67.3",
+]
+
+[tool.setuptools]
+py-modules = ["config"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ann*", "embeddings*", "inference*"]
+
+[tool.uv.sources]
+faiss = { path = "../faiss/build/faiss/python" }
